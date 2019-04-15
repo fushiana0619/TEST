@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable_Shubetsu1" msprop:Generator_TableClassName="DataTable_Shubetsu1DataTable" msprop:Generator_TableVarName="tableDataTable_Shubetsu1" msprop:Generator_TablePropName="DataTable_Shubetsu1" msprop:Generator_RowDeletingName="DataTable_Shubetsu1RowDeleting" msprop:Generator_RowChangingName="DataTable_Shubetsu1RowChanging" msprop:Generator_RowEvHandlerName="DataTable_Shubetsu1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_Shubetsu1RowDeleted" msprop:Generator_UserTableName="DataTable_Shubetsu1" msprop:Generator_RowChangedName="DataTable_Shubetsu1RowChanged" msprop:Generator_RowEvArgName="DataTable_Shubetsu1RowChangeEvent" msprop:Generator_RowClassName="DataTable_Shubetsu1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="I_SHUBETSU_CD" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CDColumn" msprop:Generator_UserColumnName="I_SHUBETSU_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_NUM" msprop:Generator_ColumnVarNameInTable="columnI_CD_NUM" msprop:Generator_ColumnPropNameInRow="I_CD_NUM" msprop:Generator_ColumnPropNameInTable="I_CD_NUMColumn" msprop:Generator_UserColumnName="I_CD_NUM" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_MEISHO" msprop:Generator_ColumnVarNameInTable="columnI_CD_MEISHO" msprop:Generator_ColumnPropNameInRow="I_CD_MEISHO" msprop:Generator_ColumnPropNameInTable="I_CD_MEISHOColumn" msprop:Generator_UserColumnName="I_CD_MEISHO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable_Shubetsu2" msprop:Generator_TableClassName="DataTable_Shubetsu2DataTable" msprop:Generator_TableVarName="tableDataTable_Shubetsu2" msprop:Generator_TablePropName="DataTable_Shubetsu2" msprop:Generator_RowDeletingName="DataTable_Shubetsu2RowDeleting" msprop:Generator_RowChangingName="DataTable_Shubetsu2RowChanging" msprop:Generator_RowEvHandlerName="DataTable_Shubetsu2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_Shubetsu2RowDeleted" msprop:Generator_UserTableName="DataTable_Shubetsu2" msprop:Generator_RowChangedName="DataTable_Shubetsu2RowChanged" msprop:Generator_RowEvArgName="DataTable_Shubetsu2RowChangeEvent" msprop:Generator_RowClassName="DataTable_Shubetsu2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="I_SHUBETSU_CD" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CDColumn" msprop:Generator_UserColumnName="I_SHUBETSU_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_NUM" msprop:Generator_ColumnVarNameInTable="columnI_CD_NUM" msprop:Generator_ColumnPropNameInRow="I_CD_NUM" msprop:Generator_ColumnPropNameInTable="I_CD_NUMColumn" msprop:Generator_UserColumnName="I_CD_NUM" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_MEISHO" msprop:Generator_ColumnVarNameInTable="columnI_CD_MEISHO" msprop:Generator_ColumnPropNameInRow="I_CD_MEISHO" msprop:Generator_ColumnPropNameInTable="I_CD_MEISHOColumn" msprop:Generator_UserColumnName="I_CD_MEISHO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable_Shubetsu3" msprop:Generator_TableClassName="DataTable_Shubetsu3DataTable" msprop:Generator_TableVarName="tableDataTable_Shubetsu3" msprop:Generator_TablePropName="DataTable_Shubetsu3" msprop:Generator_RowDeletingName="DataTable_Shubetsu3RowDeleting" msprop:Generator_RowChangingName="DataTable_Shubetsu3RowChanging" msprop:Generator_RowEvHandlerName="DataTable_Shubetsu3RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_Shubetsu3RowDeleted" msprop:Generator_UserTableName="DataTable_Shubetsu3" msprop:Generator_RowChangedName="DataTable_Shubetsu3RowChanged" msprop:Generator_RowEvArgName="DataTable_Shubetsu3RowChangeEvent" msprop:Generator_RowClassName="DataTable_Shubetsu3Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="I_SHUBETSU_CD" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CDColumn" msprop:Generator_UserColumnName="I_SHUBETSU_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_NUM" msprop:Generator_ColumnVarNameInTable="columnI_CD_NUM" msprop:Generator_ColumnPropNameInRow="I_CD_NUM" msprop:Generator_ColumnPropNameInTable="I_CD_NUMColumn" msprop:Generator_UserColumnName="I_CD_NUM" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CD_MEISHO" msprop:Generator_ColumnVarNameInTable="columnI_CD_MEISHO" msprop:Generator_ColumnPropNameInRow="I_CD_MEISHO" msprop:Generator_ColumnPropNameInTable="I_CD_MEISHOColumn" msprop:Generator_UserColumnName="I_CD_MEISHO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="I_SHUBETSU_CD1" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD1" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD1" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CD1Column" msprop:Generator_UserColumnName="I_SHUBETSU_CD1" type="xs:string" minOccurs="0" />
+              <xs:element name="I_SHUBETSU_CD2" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD2" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD2" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CD2Column" msprop:Generator_UserColumnName="I_SHUBETSU_CD2" type="xs:string" minOccurs="0" />
+              <xs:element name="I_SHUBETSU_CD3" msprop:Generator_ColumnVarNameInTable="columnI_SHUBETSU_CD3" msprop:Generator_ColumnPropNameInRow="I_SHUBETSU_CD3" msprop:Generator_ColumnPropNameInTable="I_SHUBETSU_CD3Column" msprop:Generator_UserColumnName="I_SHUBETSU_CD3" type="xs:string" minOccurs="0" />
+              <xs:element name="I_PREFIX" msprop:Generator_ColumnVarNameInTable="columnI_PREFIX" msprop:Generator_ColumnPropNameInRow="I_PREFIX" msprop:Generator_ColumnPropNameInTable="I_PREFIXColumn" msprop:Generator_UserColumnName="I_PREFIX" type="xs:string" minOccurs="0" />
+              <xs:element name="I_SHOHIN" msprop:Generator_ColumnVarNameInTable="columnI_SHOHIN" msprop:Generator_ColumnPropNameInRow="I_SHOHIN" msprop:Generator_ColumnPropNameInTable="I_SHOHINColumn" msprop:Generator_UserColumnName="I_SHOHIN" type="xs:string" minOccurs="0" />
+              <xs:element name="I_SETSUHEN" msprop:Generator_ColumnVarNameInTable="columnI_SETSUHEN" msprop:Generator_ColumnPropNameInRow="I_SETSUHEN" msprop:Generator_ColumnPropNameInTable="I_SETSUHENColumn" msprop:Generator_UserColumnName="I_SETSUHEN" type="xs:string" minOccurs="0" />
+              <xs:element name="I_PAGE" msprop:Generator_ColumnVarNameInTable="columnI_PAGE" msprop:Generator_ColumnPropNameInRow="I_PAGE" msprop:Generator_ColumnPropNameInTable="I_PAGEColumn" msprop:Generator_UserColumnName="I_PAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="I_SUFFIX" msprop:Generator_ColumnVarNameInTable="columnI_SUFFIX" msprop:Generator_ColumnPropNameInRow="I_SUFFIX" msprop:Generator_ColumnPropNameInTable="I_SUFFIXColumn" msprop:Generator_UserColumnName="I_SUFFIX" type="xs:string" minOccurs="0" />
+              <xs:element name="I_FOLDER_PATH" msprop:Generator_ColumnVarNameInTable="columnI_FOLDER_PATH" msprop:Generator_ColumnPropNameInRow="I_FOLDER_PATH" msprop:Generator_ColumnPropNameInTable="I_FOLDER_PATHColumn" msprop:Generator_UserColumnName="I_FOLDER_PATH" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
