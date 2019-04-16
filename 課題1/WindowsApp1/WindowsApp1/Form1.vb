@@ -270,4 +270,43 @@ Public Class Form1
         End If
     End Sub
 
+    ''' <summary>
+    ''' チェックボックスがチェックされている行のコンボボックスが入力されているかどうかのチェック
+    ''' </summary>
+    ''' <returns></returns>
+    Private Function ComboBlankCheckAll() As Boolean
+
+        Dim blnCheckComplete As Boolean = True
+
+        For Each dr As DataGridViewRow In Me.dgvFileData.Rows
+            If CType(dr.Cells("CheckBox").Value, Boolean) Then
+                ' チェックされている行のコンボボックスが入力されている場合
+                If Not (dr.Cells(2).Value <> "" AndAlso dr.Cells(3).Value <> "" AndAlso dr.Cells(4).Value <> "") Then
+                    blnCheckComplete = False
+                    Exit For
+                End If
+            End If
+        Next
+        Return blnCheckComplete
+    End Function
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If ComboBlankCheckAll() Then
+            'チェックボックスにチェックがされている行のコンボボックスがすべて入力されている場合
+            'DBにSelectコンボボックス情報からデータを取得
+            'Select Case DataCount 件数が2件以上
+            'Case Is >= 2
+            'ダイアログを展開する戻り価はrowcount
+            'case 1
+            '１件しかデータがない場合は取得した前回の名称を表示
+            'default 件数が0件
+
+            '命名ルールデータベースを取得
+            '命名ルールに従ってかくコントロールの変更可否、コンボボックスの中身をセット
+
+
+        Else
+            MessageBox.Show("未入力あり")
+        End If
+    End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class Form1
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvFileData = New System.Windows.Forms.DataGridView()
         Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.colFileName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,14 +37,15 @@ Partial Class Form1
         Me.FilePath = New System.Windows.Forms.TextBox()
         Me.btnRead = New System.Windows.Forms.Button()
         Me.dsDataSet = New System.Data.DataSet()
-        Me.btnMente1 = New System.Windows.Forms.Button()
-        Me.btnMente2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnAllSelect = New System.Windows.Forms.Button()
         Me.btnAllRelease = New System.Windows.Forms.Button()
         Me.btnReadFolder = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnMente1 = New System.Windows.Forms.Button()
+        Me.btnMente2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgvFileData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,14 +56,14 @@ Partial Class Form1
         Me.dgvFileData.AllowUserToDeleteRows = False
         Me.dgvFileData.AllowUserToResizeColumns = False
         Me.dgvFileData.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFileData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFileData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvFileData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvFileData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBox, Me.colFileName, Me.KBN1, Me.KBN2, Me.KBN3, Me.txtShohin, Me.txtSetsuHen, Me.txtPage, Me.SaveFoloder, Me.cmbDirectory})
         Me.dgvFileData.Location = New System.Drawing.Point(12, 109)
@@ -158,24 +159,6 @@ Partial Class Form1
         '
         Me.dsDataSet.DataSetName = "NewDataSet"
         '
-        'btnMente1
-        '
-        Me.btnMente1.Location = New System.Drawing.Point(12, 451)
-        Me.btnMente1.Name = "btnMente1"
-        Me.btnMente1.Size = New System.Drawing.Size(185, 23)
-        Me.btnMente1.TabIndex = 4
-        Me.btnMente1.Text = "メンテナンス画面1"
-        Me.btnMente1.UseVisualStyleBackColor = True
-        '
-        'btnMente2
-        '
-        Me.btnMente2.Location = New System.Drawing.Point(229, 451)
-        Me.btnMente2.Name = "btnMente2"
-        Me.btnMente2.Size = New System.Drawing.Size(185, 23)
-        Me.btnMente2.TabIndex = 5
-        Me.btnMente2.Text = "メンテナンス画面2"
-        Me.btnMente2.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(1241, 30)
@@ -231,12 +214,40 @@ Partial Class Form1
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "取り込みフォルダ選択"
         '
+        'btnMente1
+        '
+        Me.btnMente1.Location = New System.Drawing.Point(12, 451)
+        Me.btnMente1.Name = "btnMente1"
+        Me.btnMente1.Size = New System.Drawing.Size(185, 23)
+        Me.btnMente1.TabIndex = 4
+        Me.btnMente1.Text = "メンテナンス画面1"
+        Me.btnMente1.UseVisualStyleBackColor = True
+        '
+        'btnMente2
+        '
+        Me.btnMente2.Location = New System.Drawing.Point(229, 451)
+        Me.btnMente2.Name = "btnMente2"
+        Me.btnMente2.Size = New System.Drawing.Size(185, 23)
+        Me.btnMente2.TabIndex = 5
+        Me.btnMente2.Text = "メンテナンス画面2"
+        Me.btnMente2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(329, 75)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 12
+        Me.Button3.Text = "表示"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(1339, 508)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnAllRelease)
         Me.Controls.Add(Me.btnAllSelect)
@@ -260,9 +271,7 @@ Partial Class Form1
     Friend WithEvents FilePath As TextBox
     Friend WithEvents btnRead As Button
     Friend WithEvents dgvFileData As DataGridView
-    Friend WithEvents btnMente1 As Button
     Friend WithEvents dsDataSet As DataSet
-    Friend WithEvents btnMente2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btnAllSelect As Button
@@ -279,4 +288,7 @@ Partial Class Form1
     Friend WithEvents txtPage As DataGridViewTextBoxColumn
     Friend WithEvents SaveFoloder As DataGridViewTextBoxColumn
     Friend WithEvents cmbDirectory As DataGridViewComboBoxColumn
+    Friend WithEvents btnMente1 As Button
+    Friend WithEvents btnMente2 As Button
+    Friend WithEvents Button3 As Button
 End Class
