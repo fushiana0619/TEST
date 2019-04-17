@@ -12,6 +12,15 @@ Public Class Form1
     Private Const CONNECTION As String = "Data Source=orcl;User Id=system;Password=Tyatarou0;"
     Dim g_DataTable As New DataTable()
 
+    Public Property _ExecutingRow As DataTable
+
+    Public ReadOnly Property SearchResult() As DataTable
+        Get
+            Return _ExecutingRow
+        End Get
+    End Property
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
@@ -117,27 +126,39 @@ Public Class Form1
             If System.IO.Directory.Exists(Me.FilePath.Text) Then
 
                 ' データベースオープン
-                Dim conn As New OracleConnection(CONNECTION)
+                'Dim conn As New OracleConnection(CONNECTION)
                 Dim ds As New DataSet1()
 
-                conn.Open()
+                'conn.Open()
                 ' 種別コンボボックスの内容をデータベースから取得して設定
-                Dim cmd1 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 1", conn)
-                Dim da1 As OracleDataAdapter = New OracleDataAdapter(cmd1)
-                Dim cmd2 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 2", conn)
-                Dim da2 As OracleDataAdapter = New OracleDataAdapter(cmd2)
-                Dim cmd3 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 3", conn)
-                Dim da3 As OracleDataAdapter = New OracleDataAdapter(cmd3)
-                Dim cmd_MEIMEI As OracleCommand = New OracleCommand("SELECT * FROM RULE_DB", conn)
-                Dim da_MEIMEI As OracleDataAdapter = New OracleDataAdapter(cmd_MEIMEI)
+                'Dim cmd1 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 1", conn)
+                'Dim da1 As OracleDataAdapter = New OracleDataAdapter(cmd1)
+                'Dim cmd2 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 2", conn)
+                'Dim da2 As OracleDataAdapter = New OracleDataAdapter(cmd2)
+                'Dim cmd3 As OracleCommand = New OracleCommand("SELECT * FROM TEST_DB WHERE I_SHUBETSU_CD = 3", conn)
+                'Dim da3 As OracleDataAdapter = New OracleDataAdapter(cmd3)
+                'Dim cmd_MEIMEI As OracleCommand = New OracleCommand("SELECT * FROM RULE_DB", conn)
+                'Dim da_MEIMEI As OracleDataAdapter = New OracleDataAdapter(cmd_MEIMEI)
+                Dim row As DataRow
+                row = ds.DataTable_Shubetsu1.NewRow
+                row("I_SHUBETSU_CD") = "1"
+                row("I_CD_NUM") = "1"
+                row("I_CD_MEISHO") = "A"
+                ds.DataTable_Shubetsu1.Rows.Add(row)
 
-                da1.Fill(ds.DataTable_Shubetsu1)
-                da2.Fill(ds.DataTable_Shubetsu2)
-                da3.Fill(ds.DataTable_Shubetsu3)
+                row = ds.DataTable_Shubetsu2.NewRow
+                row("I_SHUBETSU_CD") = "2"
+                row("I_CD_NUM") = "2"
+                row("I_CD_MEISHO") = "B"
+                ds.DataTable_Shubetsu2.Rows.Add(row)
 
-                g_DataTable = New DataTable()
-                da_MEIMEI.Fill(g_DataTable)
-
+                row = ds.DataTable_Shubetsu3.NewRow
+                row("I_SHUBETSU_CD") = "3"
+                row("I_CD_NUM") = "3"
+                row("I_CD_MEISHO") = "C"
+                ds.DataTable_Shubetsu3.Rows.Add(row)
+                'g_DataTable = New DataTable()
+                'da_MEIMEI.Fill(g_DataTable)
                 cboKBN1 = CType(dgvFileData.Columns(2), DataGridViewComboBoxColumn)
                 cboKBN2 = CType(dgvFileData.Columns(3), DataGridViewComboBoxColumn)
                 cboKBN3 = CType(dgvFileData.Columns(4), DataGridViewComboBoxColumn)
@@ -291,20 +312,55 @@ Public Class Form1
     End Function
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim frmKensaku As Form5
+        Dim tbl As DataTable = New DataTable("table1")
+        Dim row As DataRow
+        Dim drSelectedRow As DataGridViewRow
+        tbl.Columns.Add("Item0")
+        tbl.Columns.Add("Item1")
+        tbl.Columns.Add("Item2")
+        tbl.Columns.Add("Item3")
+        tbl.Columns.Add("Item4")
+        '１列目
+        row = tbl.NewRow
+        row("Item0") = "1"
+        row("Item1") = "BCDEFGHIJK"
+        row("Item2") = "A2"
+        row("Item3") = "A3"
+        row("Item4") = "2019/4/1"
+        tbl.Rows.Add(row)
+
+        '２列目
+        row = tbl.NewRow
+        row("Item0") = "2"
+        row("Item1") = "ABCDEFGHIJ"
+        row("Item2") = "B2"
+        row("Item3") = "B3"
+        row("Item4") = "2019/4/2"
+        tbl.Rows.Add(row)
+
+        '３列目
+        row = tbl.NewRow
+        row("Item0") = "3"
+        row("Item1") = "ZZXX"
+        row("Item2") = "B2"
+        row("Item3") = "B3"
+        row("Item4") = "2019/4/3"
+        tbl.Rows.Add(row)
         If ComboBlankCheckAll() Then
-            'チェックボックスにチェックがされている行のコンボボックスがすべて入力されている場合
-            'DBにSelectコンボボックス情報からデータを取得
-            'Select Case DataCount 件数が2件以上
-            'Case Is >= 2
-            'ダイアログを展開する戻り価はrowcount
-            'case 1
-            '１件しかデータがない場合は取得した前回の名称を表示
-            'default 件数が0件
-
-            '命名ルールデータベースを取得
-            '命名ルールに従ってかくコントロールの変更可否、コンボボックスの中身をセット
-
-
+            For Each dr As DataGridViewRow In Me.dgvFileData.Rows
+                If CType(dr.Cells("CheckBox").Value, Boolean) Then
+                    If tbl.Rows.Count >= 2 Then
+                        frmKensaku = New Form5()
+                        frmKensaku.ExecutingTable = tbl
+                        frmKensaku.strFileName = dr.Cells(1).Value
+                        frmKensaku.ShowDialog()
+                        drSelectedRow = frmKensaku.SelectedRow
+                        dr.Cells("colBuhin").Value = drSelectedRow.Cells("colBuhin").Value
+                        dr.Cells("colSetsuhen").Value = drSelectedRow.Cells("colSetsuhen").Value
+                    End If
+                End If
+            Next
         Else
             MessageBox.Show("未入力あり")
         End If
