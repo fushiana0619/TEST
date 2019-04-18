@@ -22,20 +22,8 @@ Partial Class Form1
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvFileData = New System.Windows.Forms.DataGridView()
-        Me.FilePath = New System.Windows.Forms.TextBox()
-        Me.btnRead = New System.Windows.Forms.Button()
-        Me.dsDataSet = New System.Data.DataSet()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.btnAllSelect = New System.Windows.Forms.Button()
-        Me.btnAllRelease = New System.Windows.Forms.Button()
-        Me.btnReadFolder = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnMente1 = New System.Windows.Forms.Button()
-        Me.btnMente2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.colFileName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.KBN1 = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -46,6 +34,17 @@ Partial Class Form1
         Me.colPage = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SaveFoloder = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmbDirectory = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.FilePath = New System.Windows.Forms.TextBox()
+        Me.btnRead = New System.Windows.Forms.Button()
+        Me.dsDataSet = New System.Data.DataSet()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAllSelect = New System.Windows.Forms.Button()
+        Me.btnAllRelease = New System.Windows.Forms.Button()
+        Me.btnReadFolder = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnMente = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgvFileData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,14 +55,14 @@ Partial Class Form1
         Me.dgvFileData.AllowUserToDeleteRows = False
         Me.dgvFileData.AllowUserToResizeColumns = False
         Me.dgvFileData.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFileData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFileData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvFileData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvFileData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBox, Me.colFileName, Me.KBN1, Me.KBN2, Me.KBN3, Me.colBuhin, Me.colSetsuhen, Me.colPage, Me.SaveFoloder, Me.cmbDirectory})
         Me.dgvFileData.Location = New System.Drawing.Point(12, 109)
@@ -73,6 +72,71 @@ Partial Class Form1
         Me.dgvFileData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFileData.Size = New System.Drawing.Size(1304, 305)
         Me.dgvFileData.TabIndex = 2
+        '
+        'CheckBox
+        '
+        Me.CheckBox.HeaderText = "選択"
+        Me.CheckBox.Name = "CheckBox"
+        Me.CheckBox.Width = 40
+        '
+        'colFileName
+        '
+        Me.colFileName.HeaderText = "ファイル名"
+        Me.colFileName.Name = "colFileName"
+        '
+        'KBN1
+        '
+        Me.KBN1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.KBN1.HeaderText = "帳票"
+        Me.KBN1.Name = "KBN1"
+        Me.KBN1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.KBN1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.KBN1.Width = 50
+        '
+        'KBN2
+        '
+        Me.KBN2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.KBN2.HeaderText = "取引先"
+        Me.KBN2.Name = "KBN2"
+        Me.KBN2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.KBN2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'KBN3
+        '
+        Me.KBN3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.KBN3.HeaderText = "区分3"
+        Me.KBN3.Name = "KBN3"
+        '
+        'colBuhin
+        '
+        Me.colBuhin.HeaderText = "部品番号"
+        Me.colBuhin.Name = "colBuhin"
+        Me.colBuhin.Width = 150
+        '
+        'colSetsuhen
+        '
+        Me.colSetsuhen.HeaderText = "説変番号"
+        Me.colSetsuhen.Name = "colSetsuhen"
+        Me.colSetsuhen.Width = 130
+        '
+        'colPage
+        '
+        Me.colPage.HeaderText = "ページ"
+        Me.colPage.Name = "colPage"
+        Me.colPage.Width = 70
+        '
+        'SaveFoloder
+        '
+        Me.SaveFoloder.HeaderText = "保存先ファイルパス"
+        Me.SaveFoloder.Name = "SaveFoloder"
+        Me.SaveFoloder.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SaveFoloder.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.SaveFoloder.Width = 460
+        '
+        'cmbDirectory
+        '
+        Me.cmbDirectory.HeaderText = "保存フォルダ"
+        Me.cmbDirectory.Name = "cmbDirectory"
         '
         'FilePath
         '
@@ -149,23 +213,14 @@ Partial Class Form1
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "取り込みフォルダ選択"
         '
-        'btnMente1
+        'btnMente
         '
-        Me.btnMente1.Location = New System.Drawing.Point(12, 451)
-        Me.btnMente1.Name = "btnMente1"
-        Me.btnMente1.Size = New System.Drawing.Size(185, 23)
-        Me.btnMente1.TabIndex = 4
-        Me.btnMente1.Text = "メンテナンス画面1"
-        Me.btnMente1.UseVisualStyleBackColor = True
-        '
-        'btnMente2
-        '
-        Me.btnMente2.Location = New System.Drawing.Point(229, 451)
-        Me.btnMente2.Name = "btnMente2"
-        Me.btnMente2.Size = New System.Drawing.Size(185, 23)
-        Me.btnMente2.TabIndex = 5
-        Me.btnMente2.Text = "メンテナンス画面2"
-        Me.btnMente2.UseVisualStyleBackColor = True
+        Me.btnMente.Location = New System.Drawing.Point(12, 451)
+        Me.btnMente.Name = "btnMente"
+        Me.btnMente.Size = New System.Drawing.Size(185, 23)
+        Me.btnMente.TabIndex = 4
+        Me.btnMente.Text = "メンテナンス画面1"
+        Me.btnMente.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -175,71 +230,6 @@ Partial Class Form1
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "表示"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'CheckBox
-        '
-        Me.CheckBox.HeaderText = "選択"
-        Me.CheckBox.Name = "CheckBox"
-        Me.CheckBox.Width = 40
-        '
-        'colFileName
-        '
-        Me.colFileName.HeaderText = "ファイル名"
-        Me.colFileName.Name = "colFileName"
-        '
-        'KBN1
-        '
-        Me.KBN1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.KBN1.HeaderText = "帳票"
-        Me.KBN1.Name = "KBN1"
-        Me.KBN1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.KBN1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.KBN1.Width = 50
-        '
-        'KBN2
-        '
-        Me.KBN2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.KBN2.HeaderText = "取引先"
-        Me.KBN2.Name = "KBN2"
-        Me.KBN2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.KBN2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'KBN3
-        '
-        Me.KBN3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.KBN3.HeaderText = "区分3"
-        Me.KBN3.Name = "KBN3"
-        '
-        'colBuhin
-        '
-        Me.colBuhin.HeaderText = "部品番号"
-        Me.colBuhin.Name = "colBuhin"
-        Me.colBuhin.Width = 150
-        '
-        'colSetsuhen
-        '
-        Me.colSetsuhen.HeaderText = "説変番号"
-        Me.colSetsuhen.Name = "colSetsuhen"
-        Me.colSetsuhen.Width = 130
-        '
-        'colPage
-        '
-        Me.colPage.HeaderText = "ページ"
-        Me.colPage.Name = "colPage"
-        Me.colPage.Width = 70
-        '
-        'SaveFoloder
-        '
-        Me.SaveFoloder.HeaderText = "保存先ファイルパス"
-        Me.SaveFoloder.Name = "SaveFoloder"
-        Me.SaveFoloder.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SaveFoloder.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.SaveFoloder.Width = 460
-        '
-        'cmbDirectory
-        '
-        Me.cmbDirectory.HeaderText = "保存フォルダ"
-        Me.cmbDirectory.Name = "cmbDirectory"
         '
         'Form1
         '
@@ -253,8 +243,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnAllSelect)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnMente2)
-        Me.Controls.Add(Me.btnMente1)
+        Me.Controls.Add(Me.btnMente)
         Me.Controls.Add(Me.btnRead)
         Me.Controls.Add(Me.dgvFileData)
         Me.Controls.Add(Me.btnReadFolder)
@@ -278,8 +267,7 @@ Partial Class Form1
     Friend WithEvents btnAllRelease As Button
     Friend WithEvents btnReadFolder As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnMente1 As Button
-    Friend WithEvents btnMente2 As Button
+    Friend WithEvents btnMente As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents CheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents colFileName As DataGridViewTextBoxColumn

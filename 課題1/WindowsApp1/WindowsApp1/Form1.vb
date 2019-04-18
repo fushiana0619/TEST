@@ -25,14 +25,9 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub btnMente1_Click(sender As Object, e As EventArgs) Handles btnMente1.Click
-        Dim frmMente1 As Form = New Form2()
-        frmMente1.ShowDialog()
-    End Sub
-
-    Private Sub btnMente2_Click(sender As Object, e As EventArgs) Handles btnMente2.Click
-        Dim frmMente2 As Form = New Form3()
-        frmMente2.ShowDialog()
+    Private Sub btnMente_Click(sender As Object, e As EventArgs) Handles btnMente.Click
+        Dim frmMente As Form = New Form4()
+        frmMente.ShowDialog()
     End Sub
 
     Private Sub btnReadFolder_Click(sender As Object, e As EventArgs) Handles btnReadFolder.Click

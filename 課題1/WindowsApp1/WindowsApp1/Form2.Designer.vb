@@ -22,53 +22,57 @@ Partial Class Form2
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.lstBox = New System.Windows.Forms.ListBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.cmbShubetsu = New System.Windows.Forms.ComboBox()
+        Me.lstShubetsu = New System.Windows.Forms.ListBox()
+        Me.txtCDNUM = New System.Windows.Forms.TextBox()
+        Me.txtCDMeisho = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnInsert = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnHyoji = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cmbShubetsu
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(38, 33)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(237, 24)
-        Me.ComboBox1.TabIndex = 0
+        Me.cmbShubetsu.Font = New System.Drawing.Font("MS UI Gothic", 12.0!)
+        Me.cmbShubetsu.FormattingEnabled = True
+        Me.cmbShubetsu.Location = New System.Drawing.Point(38, 33)
+        Me.cmbShubetsu.Name = "cmbShubetsu"
+        Me.cmbShubetsu.Size = New System.Drawing.Size(237, 24)
+        Me.cmbShubetsu.TabIndex = 0
         '
-        'lstBox
+        'lstShubetsu
         '
-        Me.lstBox.Font = New System.Drawing.Font("MS UI Gothic", 9.0!)
-        Me.lstBox.FormattingEnabled = True
-        Me.lstBox.ItemHeight = 12
-        Me.lstBox.Location = New System.Drawing.Point(38, 124)
-        Me.lstBox.Name = "lstBox"
-        Me.lstBox.Size = New System.Drawing.Size(296, 292)
-        Me.lstBox.TabIndex = 1
+        Me.lstShubetsu.Font = New System.Drawing.Font("MS UI Gothic", 12.0!)
+        Me.lstShubetsu.FormattingEnabled = True
+        Me.lstShubetsu.ItemHeight = 16
+        Me.lstShubetsu.Location = New System.Drawing.Point(38, 124)
+        Me.lstShubetsu.Name = "lstShubetsu"
+        Me.lstShubetsu.Size = New System.Drawing.Size(296, 292)
+        Me.lstShubetsu.TabIndex = 1
         '
-        'TextBox1
+        'txtCDNUM
         '
-        Me.TextBox1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(489, 211)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 2
+        Me.txtCDNUM.Font = New System.Drawing.Font("MS UI Gothic", 12.0!)
+        Me.txtCDNUM.Location = New System.Drawing.Point(489, 211)
+        Me.txtCDNUM.MaxLength = 3
+        Me.txtCDNUM.Name = "txtCDNUM"
+        Me.txtCDNUM.Size = New System.Drawing.Size(100, 23)
+        Me.txtCDNUM.TabIndex = 2
         '
-        'TextBox2
+        'txtCDMeisho
         '
-        Me.TextBox2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(489, 264)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(267, 23)
-        Me.TextBox2.TabIndex = 3
+        Me.txtCDMeisho.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txtCDMeisho.Location = New System.Drawing.Point(489, 264)
+        Me.txtCDMeisho.MaxLength = 50
+        Me.txtCDMeisho.Name = "txtCDMeisho"
+        Me.txtCDMeisho.Size = New System.Drawing.Size(267, 23)
+        Me.txtCDMeisho.TabIndex = 3
         '
         'Label1
         '
@@ -88,32 +92,32 @@ Partial Class Form2
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "コード名称"
         '
-        'Button1
+        'btnInsert
         '
-        Me.Button1.Location = New System.Drawing.Point(489, 124)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "追加"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnInsert.Location = New System.Drawing.Point(489, 124)
+        Me.btnInsert.Name = "btnInsert"
+        Me.btnInsert.Size = New System.Drawing.Size(75, 23)
+        Me.btnInsert.TabIndex = 6
+        Me.btnInsert.Text = "追加"
+        Me.btnInsert.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnUpdate
         '
-        Me.Button2.Location = New System.Drawing.Point(587, 124)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "修正"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(587, 124)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 7
+        Me.btnUpdate.Text = "修正"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnDelete
         '
-        Me.Button3.Location = New System.Drawing.Point(681, 124)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "削除"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(681, 124)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 8
+        Me.btnDelete.Text = "削除"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -133,23 +137,43 @@ Partial Class Form2
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "パターン種別"
         '
+        'btnHyoji
+        '
+        Me.btnHyoji.Location = New System.Drawing.Point(281, 33)
+        Me.btnHyoji.Name = "btnHyoji"
+        Me.btnHyoji.Size = New System.Drawing.Size(75, 23)
+        Me.btnHyoji.TabIndex = 11
+        Me.btnHyoji.Text = "表示"
+        Me.btnHyoji.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(38, 95)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 12
+        Me.btnClear.Text = "クリア"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.btnHyoji)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnInsert)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.lstBox)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.txtCDMeisho)
+        Me.Controls.Add(Me.txtCDNUM)
+        Me.Controls.Add(Me.lstShubetsu)
+        Me.Controls.Add(Me.cmbShubetsu)
         Me.Name = "Form2"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
@@ -157,15 +181,17 @@ Partial Class Form2
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents lstBox As ListBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cmbShubetsu As ComboBox
+    Friend WithEvents lstShubetsu As ListBox
+    Friend WithEvents txtCDNUM As TextBox
+    Friend WithEvents txtCDMeisho As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnInsert As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnHyoji As Button
+    Friend WithEvents btnClear As Button
 End Class
